@@ -54,7 +54,15 @@ class Cliente{
                 estaba añadido.
             */
 
-    bool addCar(Coche* car);
+    bool addCar(Coche* car){
+        if(searchCar(car->getLicense()) == NULL){
+            //Si el coche no se encuentra en la lista, lo añade y devuelve true.
+            _car.push_back(car);
+            return true;
+        }
+        //Si el coche no estaba en la lista, devuelve false.
+        return false;
+    }
     
         //Método removeCar():
             /*!
