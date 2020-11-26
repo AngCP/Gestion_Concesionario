@@ -71,7 +71,18 @@ class Cliente{
                 la lista.
             */
 
-    bool removeCar(std::string licence);
+    bool removeCar(std::string licence){
+        Coche* eliminable = NULL;
+        if(eliminable = searchCar(car->getLicense()) != NULL){
+            //Si el coche está en la lista, lo elimina y devuelve true.
+            std::vecto<Coceh*>::iterator position = 
+                std::find(_cars.begin(), _cars.end(), eliminable);
+            _car.erase(position);
+            return true;
+        }
+            //Si el coche no está en la lista, devuelve false.
+            return false;
+    }
 
         //Método destructor:
 
