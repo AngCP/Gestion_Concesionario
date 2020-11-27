@@ -13,16 +13,16 @@ class Cliente{
         std::vector<Coche*> _cars;
         unsigned int _money;
 
-    //Métodos:
+    //Funciones:
 
-        //Método constructor:
+        //Constructor:
     Cliente(string _name);
 
         //Getters y Setters:
     
     std::string getName();
 
-        //Otros métodos:
+        //Otras funciones:
     
     void addMoney(unsigned int amount);
     void expendMoney(unsigned int amount);
@@ -30,7 +30,7 @@ class Cliente{
         return money;
     }
 
-        //Método searchCar():
+        //Función searchCar():
             /*!
                 \brief Busca un coche en el stock del cliente.
                 @returns el coche en cuestión, NULL si no lo encuentra.
@@ -47,7 +47,7 @@ class Cliente{
         }
     }
 
-        //Método addCar():
+        //Función addCar():
             /*!
                 \brief Añade un nuevo coche.
                 @returns true si se añade correctamente, false si el coche ya
@@ -64,7 +64,7 @@ class Cliente{
         return false;
     }
     
-        //Método removeCar():
+        //Función removeCar():
             /*!
                 \brief Elimina un coche. del parque del cliente.
                 @returns true si se elimina correctamente, false si no estaba en
@@ -84,7 +84,7 @@ class Cliente{
             return false;
     }
 
-        //Método destructor:
+        //Destructor:
 
     virtual ~Cliente(void){
 
