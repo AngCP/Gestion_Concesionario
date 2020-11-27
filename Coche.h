@@ -28,17 +28,42 @@ class Coche{
     Coche(std::string license);
 
         //Getters y Setters:
-    int getPrice();
+    int getPrice(){
+        return price;
+    }
 
         //Status methods:
-    bool isOk();
-    void toggleOk(status o);
-    bool isBroken();
-    void toggleBroken(status b);
-    bool isRepairing();
-    void toggleRepairing(status rp);
-    bool isReady();
-    void toggleReady(status rd);
+    bool isOk(){
+        return ok;
+    }
+
+    void toggleOk(status o){
+        ok = o;
+    }
+
+    bool isBroken(){
+        return broken;
+    }
+
+    void toggleBroken(status b){
+        broken = b;
+    }
+
+    bool isRepairing(){
+        return repairing;
+    }
+
+    void toggleRepairing(status rp){
+        repairing = rp;
+    }
+
+    bool isReady(){
+        return ready;
+    }
+
+    void toggleReady(status rd){
+        ready = rd;
+    }
 
         //Destructor:
     virtual ~Coche(void){
