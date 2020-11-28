@@ -62,7 +62,22 @@ class Concesionario{
                 @returns false si el coche no está en el inventario o el cliente no puede pagarlo.
             */
     
-    bool sellCar(Cliente* client, std::string license);
+    bool sellCar(Cliente* client, std::string license){
+        Coche* sellableCar = NULL;
+        if(sellableCar = searchCarInStock(car->getLicense()) != NULL){
+            /*! Si el coche sí está en el inventario, lo añade a la 
+            lista de coches del cliente y, a continuación, lo retira del inventario.*/
+            _cars.push_back(car);
+
+            std::vector<Coche* >::iterator position = 
+                std::find(_cars.begin(), _cars.end(), sellableCar);
+            _stock.erase(position);
+        }else((sellableCar = searchCarInStock(car->getLicense()) == NULL) || 
+                    (sellealeCar->getPrice() > client->getMoneyAmount())){
+            //Si el coche no está en el inventario o el cliente no puede pagarlo:
+            return false;
+        }
+    }
 
         //Función ckeckCarInGarage:
             /*!
