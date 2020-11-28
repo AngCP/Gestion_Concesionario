@@ -86,7 +86,17 @@ class Concesionario{
                 está averiado.
             */
     
-    bool checkCarInGarage(Cliente* client, std::string license);
+    bool checkCarInGarage(Cliente* client, std::string license){
+        Coche* repairableCar = NULL;
+        if(repairableCar = searchCar(car->getLicense()) != NULL){
+            //Si el cliente tiene ese coche, lo añade:
+            _repairing.push_back(car);
+        }else((repairableCar = searchCar(car->getLicense()) != NULL) || 
+                    (repairableCar->isOk() == true)){
+            //Si el cliente no tiene ese coche o el coche no eestá averiado:
+            return false;
+        }  
+    }
 
         //Función retrieveCarFromGarage:
             /*!
