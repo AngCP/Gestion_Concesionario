@@ -19,8 +19,24 @@ class Concesionario{
     Concesionario(void);
 
         //Destructor:
-    virtual ~Consecionario(void){
+    virtual ~Concesionario(void){
 
+    }
+
+        //Función searchCarInGarage:
+            /*!
+                \brief Busca un coche en el taller.
+                @returns el coche en cuestión o NULL si no lo encuentra.
+            */
+    Coche* searchCarInGarage(std::string license){
+        std::vector<Coche* >::iterator search_pos = _repairing.beging();
+
+        while(search_pos != _repairing.end()){
+            if(search_pos)->getLicense() == license)
+                return &*search_pos;
+            search_pos++;
+        }
+        return NULL;       
     }
 
         //Función addCarToStock:
