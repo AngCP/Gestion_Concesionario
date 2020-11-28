@@ -104,5 +104,15 @@ class Concesionario{
                 @returns false si el coche no está en el taller y en estado de listo.
             */
     
-    bool retrieveCarFromGarage(Cliente* client, std::string license);
+    bool retrieveCarFromGarage(Cliente* client, std::string license){
+        Coche* checkCar = NULL;
+        if((checkCar = searchCarInGarage(car->getLicense()) != NULL) || 
+                (checkCar->isReady == true)){
+            //Si el coche está en el taller y está listo, lo devuelve al cliente:
+            _cars.push_back(car);
+        }else{
+            //Si el coche no está en el taller o no está listo, devuelve false:
+            return false;
+        }    
+    }
 };
