@@ -45,7 +45,15 @@ class Concesionario{
                 @returns false si el coche ya estaba en el inventario o en el taller.
             */
     
-    bool addCarToStock(Coche* car);
+    bool addCarToStock(Coche* car){
+        if(searchCarInStock(car->getLicense()) == NULL){
+            //Si el coche no está en el inventario, lo añade:
+            _stock.push_back(car);
+        }else((searchCarInStock(car->getLicense()) != NULL) || 
+                    (searchCarInGarage(car->getLicense()) != NULL))
+            //Si el coche ya estaba en el inventario o está en el taller:
+            return false;
+    }
 
         //Función sellCar:
             /*!
