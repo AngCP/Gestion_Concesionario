@@ -1,72 +1,45 @@
-//Clase Coche.
+#include <iostream>
+#include <vector>
+#include "Coche.h"
 
-#include <string.h>
-
-class Coche{
-
-    /*! Posibles eatados del coche.*/
-
-    enum status{
-        _status_ok, /*!<Situación normal.*/
-        _status_broken, /*!<El coche debe ir al taller.*/
-        _status_repairing, /*!<El coche está siendo reparado en el taller.*/
-        _status_ready, /*!<El coche ha sido reparado y el dueño puede recogerlo.*/
-    };
-
-    //Atributos:
-
-    private:
-        std::string _license;
-        status _status;
-        unsigned int price;
-    
-    //Funciones:
-
-    public:
-
-        //Constructor:
-    Coche(std::string license);
-
-        //Getters y Setters:
+//Getters y Setters:
     int getPrice(){
         return price;
     }
 
-        //Status methods:
-    bool isOk(){
-        return ok;
+    std::string Coche::getLicense(){
+        return _license;
     }
 
-    void toggleOk(status o){
-        ok = o;
+//Status methods:
+    bool Coche::isOk(){
+        return _status_ok;
     }
 
-    bool isBroken(){
-        return broken;
+    void Coche::toggleOk(status o){
+        _status_ok = o;
     }
 
-    void toggleBroken(status b){
-        broken = b;
+    bool Coche::isBroken(){
+        return _status_broken;
     }
 
-    bool isRepairing(){
-        return repairing;
+    void Coche::toggleBroken(status b){
+        _status_broken = b;
     }
 
-    void toggleRepairing(status rp){
-        repairing = rp;
+    bool Coche::isRepairing(){
+        return _status_repairing;
     }
 
-    bool isReady(){
-        return ready;
+    void Coche::toggleRepairing(status rp){
+        _status_repairing = rp;
     }
 
-    void toggleReady(status rd){
-        ready = rd;
+    bool Coche::isReady(){
+        return _status_ready;
     }
 
-        //Destructor:
-    virtual ~Coche(void){
-
+    void Coche::toggleReady(status rd){
+        _status_ready = rd;
     }
-};
