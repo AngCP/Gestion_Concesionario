@@ -2,7 +2,12 @@
 #include "Cliente.h"
 #include <vector>
 
- //Getters y Setters:
+    //Constructor:
+    Cliente(string _name){
+        this->_name = _name;
+    }
+    
+    //Getters y Setters:
     
     std::string Cliente::getName(){
         return _name;

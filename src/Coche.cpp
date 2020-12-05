@@ -2,6 +2,11 @@
 #include <vector>
 #include "Coche.h"
 
+//Constructor:
+    Coche(std::string license){
+        this->_license = license;
+    }
+    
 //Getters y Setters:
     int getPrice(){
         return price;

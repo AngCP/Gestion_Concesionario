@@ -19,9 +19,7 @@ class Concesionario{
     public:
 
         //Constructor:
-    Concesionario(string name){
-        this->_name_company = name;
-    }
+    Concesionario(string name);
 
         //Destructor:
     virtual ~Concesionario(string _name_company){

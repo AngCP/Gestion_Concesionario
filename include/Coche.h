@@ -29,9 +29,7 @@ class Coche{
     public:
 
         //Constructor:
-    Coche(std::string license){
-        this->_license = license;
-    }
+    Coche(std::string license);
 
         //Getters y Setters:
     int getPrice();

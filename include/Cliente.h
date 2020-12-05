@@ -19,9 +19,7 @@ class Cliente{
 
     public:
         //Constructor:
-    Cliente(string _name){
-        this->_name = _name;
-    }
+    Cliente(string _name);
 
         //Getters y Setters:
     

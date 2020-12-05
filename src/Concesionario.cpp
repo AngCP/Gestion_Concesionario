@@ -3,6 +3,11 @@
 #include "Coche.h"
 #include <vector>
 
+    //Constructor:
+    Concesionario(string name){
+        this->_name_company = name;
+    }
+    
     //Función searchCarInGarage:
             /*!
                 \brief Busca un coche en el taller.
